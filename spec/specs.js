@@ -1,30 +1,18 @@
 
-describe('pigLatin', function() {
-    it("adds ay to words starting with a vowel", function(){
-        expect(pigLatin("i")).to.equal("iay");
+describe('pingPong', function() {
+    it("checks to see if number is divisible by three", function(){
+        expect(pingPong(3)).to.equal("ping");
     });
 
-    it("if a word begins with a consanant, it moves the first letter to the end and adds ay", function(){
-        expect(pigLatin("taco")).to.equal("acotay");
+    it("checks to see if number is divisible by five", function(){
+        expect(pingPong(5)).to.equal("pong");
     });
 
-    it("if a word begins with two consanants, it moves the first two letters to the end and adds ay", function() {
-        expect(pigLatin("plural")).to.equal("uralplay");
+    it("checks to see if number is divisible by both three and five", function(){
+        expect(pingPong(15)).to.equal("ping-pong");
     });
 
-    it("if a word begins with y, it moves the first letter to the end and adds ay", function() {
-        expect(pigLatin("yellow")).to.equal("ellowyay");
-    });
-
-    it("if a word has qu in the first syllabil, it moves the first letter to the end and adds ay", function() {
-        expect(pigLatin("squeal")).to.equal("ealsquay");
-    });
-
-    it("if a word has qu in the first two letters, it moves the first letter to the end and adds ay", function() {
-        expect(pigLatin("queen")).to.equal("eenquay");
-    });
-
-    it("if a word has qu in the first two letters, it moves the first letter to the end and adds ay", function() {
-        expect(pigLatin("queen squeal yellow")).to.eql("eenquay ealsquay ellowyay");
+    it("checks to see if number is not divisible by both three and five", function(){
+        expect(pingPong(17)).to.equal(17);
     });
 });
